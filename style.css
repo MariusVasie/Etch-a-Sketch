@@ -1,0 +1,23 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+.gridRow {
+    display: flex;
+}
+
+.cell {
+    border: 1px solid rgb(187, 186, 186);
+    width: 50px;
+    height: 50px;
+}
+
+#grid-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
