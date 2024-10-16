@@ -29,6 +29,18 @@ function makeColumns(cellNum) {
 
 defaultGrid();
 
-container.addEventListener("hover", function (e) {
-    cells[1].classList.add("hover");
-  });
+
+for(let i=0;i<cells.length;i++){ 
+    cells[i].addEventListener("mouseenter", function (e) {
+        cells[i].classList.add('hover');
+    });
+    // cells[i].addEventListener("mouseleave", function (e) {
+    //     cells[i].classList.remove('hover');
+    // }); 
+}
+
+
+
+
+
+  
