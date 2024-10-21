@@ -5,11 +5,15 @@ html {
     box-sizing: inherit;
   }
 
-#grid-section {
+#grid-section, #grid-setup {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 50px;
+}
+
+#grid-setup {
+  padding-bottom: 10px;
 }
 
 .gridRow {
@@ -24,4 +28,8 @@ html {
 
 .hover {
   background-color: #24B3A8;
+}
+
+#grid-size-btn {
+  padding: 5px 10px;
 }

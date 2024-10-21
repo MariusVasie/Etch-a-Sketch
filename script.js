@@ -3,6 +3,25 @@
 const container = document.getElementById("container");
 let rows = document.getElementsByClassName("gridRow");
 let cells = document.getElementsByClassName("cell");
+let gridBtn = document.getElementById("grid-size-btn");
+
+//Get grid size from user
+gridBtn.addEventListener("click", function getGridSize(e) {
+    clearGrid();
+    let gridSize = Number(window.prompt("Please enter the size of the grid (max 100)", ""));
+    if (gridSize <= 100) {
+        return gridSize;
+    } else {
+        alert('Incorrect value');
+        getGridSize();
+    }
+})
+
+//Clear the existing grid
+function clearGrid()
+{
+    document.getElementById("container").innerHTML = "";
+}
 
 // Create a default grid sized 16x16
 function defaultGrid() {
