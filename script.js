@@ -61,13 +61,24 @@ gridBtn.addEventListener("click", function(e) {
 
 //Add hover efect
 function hoverEfect() {
-    for(let i=0;i<cells.length;i++){ 
+    let cellOpacity = [];
+    for(let i=0;i<cells.length;i++){
+        cellOpacity[i] = 0.1; 
         cells[i].addEventListener("mouseenter", function (e) {
-            cells[i].classList.add('hover');
+            // cells[i].classList.add('hover');
+
+            //Generate random color
+            let randomColor = Math.floor(Math.random()*16777215).toString(16);
+  
+            cells[i].style.backgroundColor = "#" + randomColor;
+            if (cellOpacity[i] == 1) {
+                cells[i].style.opacity = "1";
+            } else {
+                cellOpacity[i] = cellOpacity[i] + 0.1;
+                cells[i].style.opacity = cellOpacity[i];
+            }
+
         });
-        // cells[i].addEventListener("mouseleave", function (e) {
-        //     cells[i].classList.remove('hover');
-        // }); 
     }
 }
   
